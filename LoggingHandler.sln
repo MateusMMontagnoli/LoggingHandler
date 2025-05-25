@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra.Shared", "Infra.Shared", "{6FC855C4-3230-4BD8-96D1-39B24F1A9124}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{7A2AC847-F9D5-4149-AB45-3E537953CDA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingHandler.Infra.Client.MyClientTesting", "src\LoggingHandler.Infra.Client.MyClientTesting\LoggingHandler.Infra.Client.MyClientTesting.csproj", "{7CB32828-F7F5-443C-A7DF-E12BA08D9A0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingHandler.APIs.MyApiTesting", "src\LoggingHandler.APIs.MyApiTesting\LoggingHandler.APIs.MyApiTesting.csproj", "{62DACB3E-5C1F-4F43-9DD3-9BE554FF8AA7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workers", "Workers", "{F4ABE60B-DCFC-4A82-A476-34D9B1D8ED0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingHandler.Workers.SendLogToS3Worker", "src\LoggingHandler.Workers.SendLogToS3Worker\LoggingHandler.Workers.SendLogToS3Worker.csproj", "{5B94DC11-55F8-48DF-82DB-2C4B45784E54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{9090ED1F-003B-4D37-9F63-7E88B407952C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileSystem", "FileSystem", "{CC22C821-F8F4-43E8-8AB5-C1E657CFD588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingHandler.Infra.FileSystem.S3Service", "src\LoggingHandler.Infra.FileSystem.S3Service\LoggingHandler.Infra.FileSystem.S3Service.csproj", "{0B8F414F-1959-4762-BF56-8134360D53DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingHandler.Infra.FileSystem.LocalFileService", "src\LoggingHandler.Infra.FileSystem.LocalFileService\LoggingHandler.Infra.FileSystem.LocalFileService.csproj", "{3199F91B-2DD0-4D8B-9749-1FB763804AA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CB32828-F7F5-443C-A7DF-E12BA08D9A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB32828-F7F5-443C-A7DF-E12BA08D9A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB32828-F7F5-443C-A7DF-E12BA08D9A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB32828-F7F5-443C-A7DF-E12BA08D9A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DACB3E-5C1F-4F43-9DD3-9BE554FF8AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DACB3E-5C1F-4F43-9DD3-9BE554FF8AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DACB3E-5C1F-4F43-9DD3-9BE554FF8AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DACB3E-5C1F-4F43-9DD3-9BE554FF8AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B94DC11-55F8-48DF-82DB-2C4B45784E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B94DC11-55F8-48DF-82DB-2C4B45784E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B94DC11-55F8-48DF-82DB-2C4B45784E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B94DC11-55F8-48DF-82DB-2C4B45784E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B8F414F-1959-4762-BF56-8134360D53DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B8F414F-1959-4762-BF56-8134360D53DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B8F414F-1959-4762-BF56-8134360D53DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B8F414F-1959-4762-BF56-8134360D53DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3199F91B-2DD0-4D8B-9749-1FB763804AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3199F91B-2DD0-4D8B-9749-1FB763804AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3199F91B-2DD0-4D8B-9749-1FB763804AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3199F91B-2DD0-4D8B-9749-1FB763804AA0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6FC855C4-3230-4BD8-96D1-39B24F1A9124} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7A2AC847-F9D5-4149-AB45-3E537953CDA0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7CB32828-F7F5-443C-A7DF-E12BA08D9A0A} = {9090ED1F-003B-4D37-9F63-7E88B407952C}
+		{62DACB3E-5C1F-4F43-9DD3-9BE554FF8AA7} = {7A2AC847-F9D5-4149-AB45-3E537953CDA0}
+		{F4ABE60B-DCFC-4A82-A476-34D9B1D8ED0A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5B94DC11-55F8-48DF-82DB-2C4B45784E54} = {F4ABE60B-DCFC-4A82-A476-34D9B1D8ED0A}
+		{9090ED1F-003B-4D37-9F63-7E88B407952C} = {6FC855C4-3230-4BD8-96D1-39B24F1A9124}
+		{CC22C821-F8F4-43E8-8AB5-C1E657CFD588} = {6FC855C4-3230-4BD8-96D1-39B24F1A9124}
+		{0B8F414F-1959-4762-BF56-8134360D53DE} = {CC22C821-F8F4-43E8-8AB5-C1E657CFD588}
+		{3199F91B-2DD0-4D8B-9749-1FB763804AA0} = {CC22C821-F8F4-43E8-8AB5-C1E657CFD588}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7ADF71EB-AD23-4BF6-963B-462C6658E735}
+	EndGlobalSection
+EndGlobal

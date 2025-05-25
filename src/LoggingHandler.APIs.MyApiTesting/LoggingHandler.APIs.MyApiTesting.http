@@ -1,0 +1,6 @@
+@LoggingHandler.APIs.MyApiTesting_HostAddress = http://localhost:5076
+
+GET {{LoggingHandler.APIs.MyApiTesting_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
