@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>1a4ceac5-2d73-494e-b55c-8ca2a046e5be</UserSecretsId>
+    <UserSecretsId>80099e9d-349a-4ad2-9a22-c3f5737efdbe</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
     <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LoggingHandler.Infra.Client.MyClientTesting\LoggingHandler.Infra.Client.MyClientTesting.csproj" />
+    <ProjectReference Include="..\LoggingHandler.Modules.QrCode\LoggingHandler.Modules.QrCode.csproj" />
   </ItemGroup>
 
 </Project>

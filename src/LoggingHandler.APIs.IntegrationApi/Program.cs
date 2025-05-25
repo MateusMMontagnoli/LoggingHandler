@@ -1,16 +1,17 @@
-using LoggingHandler.APIs.MyApiTesting.Routes;
-using LoggingHandler.Infra.Client.MyClientTesting.Extensions;
+using LoggingHandler.APIs.IntegrationApi.Routes;
+using LoggingHandler.Modules.QrCode.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddIntegrationApiClient(builder.Configuration);
+
+builder.Services.ConfigureQrCodeModule();
 
 var app = builder.Build();
 
-app.MapperTestingClientLoggingRoutes();
+app.MapperRandomResponseRoutes();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -20,6 +21,9 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
-
-
 app.Run();
+
+internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+{
+    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+}

@@ -1,0 +1,6 @@
+@LoggingHandler.APIs.IntegrationApi_HostAddress = http://localhost:5173
+
+GET {{LoggingHandler.APIs.IntegrationApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
