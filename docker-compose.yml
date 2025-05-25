@@ -1,0 +1,48 @@
+services:
+  logginghandler.apis.myapitesting:
+    image: ${DOCKER_REGISTRY-}logginghandlerapismyapitesting
+    container_name: logginghandler.myapitesting
+    build:
+      context: .
+      dockerfile: src/LoggingHandler.APIs.MyApiTesting/Dockerfile
+    environment:
+      - LOG_PATH=/app/shared-logs
+    volumes:
+      - ./shared-data:/app/shared-logs
+    networks:
+      - "testing-api"
+    ports:
+        - "5000:8080"
+        - "5001:443"
+
+  logginghandler.apis.integrationapi:
+    image: ${DOCKER_REGISTRY-}logginghandlerapisintegrationapi
+    container_name: logginghandler.integrationapi
+    build:
+      context: .
+      dockerfile: src/LoggingHandler.APIs.IntegrationApi/Dockerfile
+    environment:
+      - LOG_PATH=/app/shared-logs
+    volumes:
+      - ./shared-data:/app/shared-logs
+    networks:
+      - "testing-api"
+    ports:
+      - "5002:8080"
+      - "5003:443"
+
+  logginghandler.database:
+    image: postgres:latest
+    container_name: logginghandler.database
+    environment:
+      - POSTGRES_DB=loggingHandler
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./containers/logginghandler-db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432     
+
+networks:
+  testing-api:
+    driver: bridge
