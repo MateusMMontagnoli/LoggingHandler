@@ -77,7 +77,7 @@ http://localhost:5000/openapi/v1/openapi.json
 ## 📂 Log Flow
 
 1. MyTestingApi sends an HTTP request to IntegrationApi.
-2. The request and response are intercepted and saved as a local log file.
+2. The request and response are intercepted and saved as a temporary local log file.
 3. (in development) An event is triggered for background processing (upload).
 3. (in development) A Worker will consume the message, upload the log file to S3, and persist metadata in PostgreSQL.
 
